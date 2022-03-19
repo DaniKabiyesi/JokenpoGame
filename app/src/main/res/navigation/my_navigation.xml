@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/my_navigation"
+app:startDestination="@id/nicknameJokenpoGameFragment">
+
+
+    <fragment
+        android:id="@+id/nicknameJokenpoGameFragment"
+        android:name="com.studying.jokenpo.fragments.JokenpoNicknameFragment"
+        android:label="fragment_nickname_jokenpo_game"
+        tools:layout="@layout/fragment_jokenpo_nickname_game" />
+    <fragment
+        android:id="@+id/jokenpoStartGameFragment"
+        android:name="com.studying.jokenpo.fragments.JokenpoStartGameFragment"
+        android:label="fragment_jokenpo_start_game"
+        tools:layout="@layout/fragment_jokenpo_start_game" >
+        <action
+            android:id="@+id/action_jokenpoStartGameFragment_to_jokenpoResultGameFragment"
+            app:destination="@id/jokenpoResultGameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/jokenpoResultGameFragment"
+        android:name="com.studying.jokenpo.fragments.JokenpoResultGameFragment"
+        android:label="fragment_jokenpo_result_game"
+        tools:layout="@layout/fragment_jokenpo_result_game" >
+        <argument
+            android:name="playerSelectedOption"
+            app:argType="string" />
+    </fragment>
+</navigation>

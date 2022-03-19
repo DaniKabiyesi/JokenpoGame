@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.JokenpoStartGameFragment">
+
+    <ImageView
+        android:id="@+id/quickHandImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/quick_hand_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pickAnOptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/pick_an_option"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quickHandImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/scissorImageView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/scissor_image"
+        app:layout_constraintEnd_toStartOf="@+id/paperImageView"
+        app:layout_constraintStart_toEndOf="@+id/rockImageView"
+        app:layout_constraintTop_toBottomOf="@+id/pickAnOptionTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/rockImageView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/rock_image"
+        app:layout_constraintEnd_toStartOf="@+id/scissorImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scissorImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/paperImageView"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:src="@drawable/paper_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scissorImageView"
+        app:layout_constraintTop_toTopOf="@+id/scissorImageView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsPlayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="@string/let_s_play_game"
+        android:textSize="50sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quickHandImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/drawable/backgroun_text_view.xml" value="0.1155" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/drawable/background_config.xml" value="0.1155" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1155" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/drawable/my_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/activity_jokenpo.xml" value="0.1" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/activity_main.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/activity_quick_screen.xml" value="0.22" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_base_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_nickname_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_paper_result_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_result_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_rock_result_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_scissor_result_game.xml" value="0.16983695652173914" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_jokenpo_start_game.xml" value="0.25" />
+        <entry key="..\:/Users/Dani_Kab1yesi/AndroidStudioProjects/JoKenPo/app/src/main/res/layout/fragment_nickname_jokenpo_game.xml" value="0.16983695652173914" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
