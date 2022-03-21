@@ -2,12 +2,12 @@
 <div  align="center">
 <!-- Top Image and Title -->
 <h1>
-ZygoTV - Séries de TV
+JokenpoApp - Game
 </h1>
 <!-- Subtitle/Description -->
-<h4>ZygoTV é um aplicativo de catálogo de séries de TV</h4>
+<h4>JokenpoApp é um aplicativo/game de pedra, papel e tesoura.</h4>
   <p align="left">
-  Nesse pequeno projeto podemos visualizar séries em destaques, e ao clicar em uma série, poder ver sua sinopse e seus episódios e também a sinopses desses episódios.
+  Nesse pequeno projeto podemos jogar o clássico jogo de Jokenpo. Temos três opções de escolha, e o Computador escolherá também sua opção. Dessa forma, o aplicativo mostrará o resultado: partida empatada, ganhada ou perdida.
   </p>
 <p>
 <!-- Image Shields -->
