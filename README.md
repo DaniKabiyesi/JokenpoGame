@@ -21,6 +21,7 @@ JokenpoApp - Game
 - [Kotlin](https://kotlinlang.org) - Linguagem utilizada
 - [Android](https://developer.android.com) - Plataforma
 - [Fragments](https://developer.android.com/guide/fragments)
+- [Material Design](https://material.io/design) - Design do app
 - [Navigation Component](https://developer.android.com/guide/navigation/navigation-getting-started) - Navegação entre telas
 ---
 
