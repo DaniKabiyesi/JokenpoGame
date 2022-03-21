@@ -10,4 +10,7 @@
     <string name="pick_an_option">PICK AN OPTION:</string>
     <string name="let_s_play_game">LET\'S PLAY</string>
     <string name="play_again">Play Again</string>
+    <string name="draw_game">IT\'S A DRAW</string>
+    <string name="win_game">YOU WIN</string>
+    <string name="lose_game">YOU LOSE</string>
 </resources>

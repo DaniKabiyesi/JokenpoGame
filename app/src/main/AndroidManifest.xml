@@ -11,6 +11,7 @@
         android:theme="@style/Theme.JoKenPo">
         <activity
             android:name=".JokenpoActivity"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".QuickScreenActivity"

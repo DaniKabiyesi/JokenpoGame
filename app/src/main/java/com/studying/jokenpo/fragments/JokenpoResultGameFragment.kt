@@ -1,13 +1,9 @@
 package com.studying.jokenpo.fragments
 
-import Combination
-import Result
-import JokenpoBaseGameFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.studying.jokenpo.R
 import com.studying.jokenpo.databinding.FragmentJokenpoResultGameBinding
 
 
@@ -37,7 +33,7 @@ class JokenpoResultGameFragment : JokenpoBaseGameFragment() {
 
     private fun setListeners() {
         binding.run {
-            setClickRestartGameListener(reStartGameBtn)
+            setClickStartGameListener(reStartGameBtn)
         }
     }
 }

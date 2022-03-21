@@ -9,7 +9,8 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/resultAppHandImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -18,11 +19,13 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/resultPlayerHandImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="370dp"
+        android:layout_marginBottom="24dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:src="@drawable/rock_hand_down" />
+        tools:src="@drawable/scissor_hand_up" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -30,12 +33,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="300dp"
         android:background="@color/white"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultAppHandImageView">
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -47,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:backgroundTint="#FF35B8"
+                android:backgroundTint="@color/background_config_color"
                 android:text="@string/play_again"
                 android:textColor="@color/white"
                 android:textSize="18sp"

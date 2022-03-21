@@ -1,14 +1,13 @@
+package com.studying.jokenpo.fragments
+
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.studying.jokenpo.R
-import com.studying.jokenpo.fragments.JokenpoResultGameFragmentArgs
-import com.studying.jokenpo.fragments.JokenpoStartGameFragmentDirections
 
 
 abstract class JokenpoBaseGameFragment : Fragment() {
@@ -26,9 +25,9 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         }
     }
 
-    protected fun setClickRestartGameListener(restartGameButton: AppCompatButton) {
-        restartGameButton.setOnClickListener {
-            restartGame()
+    protected fun setClickStartGameListener(startGameButton: AppCompatButton) {
+        startGameButton.setOnClickListener {
+            startGame()
         }
     }
 
@@ -39,7 +38,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
     }
 
     protected fun showResultGame(
-        textView: TextView
+        textView: TextView,
     ) {
         when {
             setResultCombinations(Combination.DRAW_COMBINATION) -> {
@@ -54,7 +53,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         }
     }
 
-    protected fun setResultCombinations(combination: Combination): Boolean {
+    private fun setResultCombinations(combination: Combination): Boolean {
         val playerSelectedOption = args.playerSelectedOption
         return when (combination) {
             Combination.DRAW_COMBINATION ->
@@ -74,22 +73,11 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         }
     }
 
-//    private fun teste(textView: TextView) {
-//        val playerSelectedOption = args.playerSelectedOption
-//        when {
-//            setResultCombinations(Combination.WIN_COMBINATION) -> {
-//                setResultText(Result.LOSE_GAME, textView)
-//            }
-//        }
-//    }
-
-    protected fun setResultText(result: Result, textView: TextView) {
+    private fun setResultText(result: Result, textView: TextView) {
         when (result) {
-            Result.DRAW_GAME -> textView.text = "IT'S A DRAW"
-
-            Result.WIN_GAME -> textView.text = "YOU WIN"
-
-            Result.LOSE_GAME -> textView.text = "YOU LOSE"
+            Result.DRAW_GAME -> textView.text = getString(R.string.draw_game)
+            Result.WIN_GAME -> textView.text = getString(R.string.win_game)
+            Result.LOSE_GAME -> textView.text = getString(R.string.lose_game)
         }
     }
 
@@ -97,7 +85,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         val playerSelectedOption = args.playerSelectedOption
         when (playerSelectedOption) {
             "Rock" -> {
-                changeTheImage(resultPlayerImageView, R.drawable.rock_hand_down)
+                changeTheImage(resultPlayerImageView, R.drawable.rock_hand_up)
             }
             "Paper" -> {
                 changeTheImage(resultPlayerImageView, R.drawable.paper_hand_up)
@@ -111,7 +99,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
     protected fun showAppSelectedOption(anyImage: ImageView) {
         when (options[appSelectedOption]) {
             "Rock" -> {
-                changeTheImage(anyImage, R.drawable.rock_hand_up)
+                changeTheImage(anyImage, R.drawable.rock_hand_down)
             }
             "Paper" -> {
                 changeTheImage(anyImage, R.drawable.paper_hand_down)
@@ -126,7 +114,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         anyImage.setImageResource(imageButton)
     }
 
-    private fun restartGame() {
+    protected fun startGame() {
         findNavController().navigate(R.id.jokenpoStartGameFragment)
     }
 

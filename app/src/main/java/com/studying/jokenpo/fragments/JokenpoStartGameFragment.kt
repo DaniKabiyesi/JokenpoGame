@@ -1,6 +1,5 @@
 package com.studying.jokenpo.fragments
 
-import JokenpoBaseGameFragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,9 +23,6 @@ class JokenpoStartGameFragment : JokenpoBaseGameFragment() {
             false
         )
         setListeners()
-
-
-
         return binding.root
     }
 

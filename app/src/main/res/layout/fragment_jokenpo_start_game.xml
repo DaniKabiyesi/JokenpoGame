@@ -7,16 +7,16 @@
     android:background="@color/white"
     tools:context=".fragments.JokenpoStartGameFragment">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/quickHandImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="320dp"
         android:src="@drawable/quick_hand_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/pickAnOptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,4 +69,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/quickHandImageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
