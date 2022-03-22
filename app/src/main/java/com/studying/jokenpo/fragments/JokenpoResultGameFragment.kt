@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.studying.jokenpo.R
 import com.studying.jokenpo.databinding.FragmentJokenpoResultGameBinding
 
 
@@ -33,7 +35,9 @@ class JokenpoResultGameFragment : JokenpoBaseGameFragment() {
 
     private fun setListeners() {
         binding.run {
-            setClickStartGameListener(reStartGameBtn)
+            reStartGameBtn.setOnClickListener {
+                findNavController().popBackStack()
+            }
         }
     }
 }

@@ -28,9 +28,9 @@ class JokenpoStartGameFragment : JokenpoBaseGameFragment() {
 
     private fun setListeners() {
         binding.run {
-            setClickButtonGameListener(rockImageView, "Rock")
-            setClickButtonGameListener(paperImageView, "Paper")
-            setClickButtonGameListener(scissorImageView, "Scissor")
+            setClickButtonGameListener(rockImageView, JokenpoOption.ROCK_OPTION)
+            setClickButtonGameListener(paperImageView, JokenpoOption.PAPER_OPTION)
+            setClickButtonGameListener(scissorImageView, JokenpoOption.SCISSOR_OPTION)
         }
     }
 }

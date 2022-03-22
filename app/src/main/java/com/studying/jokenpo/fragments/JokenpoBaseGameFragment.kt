@@ -1,5 +1,6 @@
 package com.studying.jokenpo.fragments
 
+import android.text.style.TtsSpan
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
@@ -12,13 +13,17 @@ import com.studying.jokenpo.R
 
 abstract class JokenpoBaseGameFragment : Fragment() {
 
-    private val appSelectedOption = java.util.Random().nextInt(3)
-    private val options = arrayOf("Rock", "Paper", "Scissor")
+    private val appSelectedOption: JokenpoOption = JokenpoOption.values().random()
+    private val options = arrayOf(
+        JokenpoOption.ROCK_OPTION,
+        JokenpoOption.PAPER_OPTION,
+        JokenpoOption.SCISSOR_OPTION
+    )
     private val args: JokenpoResultGameFragmentArgs by navArgs()
 
     protected fun setClickButtonGameListener(
         gameOption: AppCompatImageView,
-        playerSelectedOption: String,
+        playerSelectedOption: JokenpoOption,
     ) {
         gameOption.setOnClickListener {
             setResultScreen(playerSelectedOption)
@@ -31,7 +36,7 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         }
     }
 
-    private fun setResultScreen(playerSelectedOption: String) {
+    private fun setResultScreen(playerSelectedOption: JokenpoOption) {
         val actionId = JokenpoStartGameFragmentDirections
             .actionJokenpoStartGameFragmentToJokenpoResultGameFragment(playerSelectedOption)
         findNavController().navigate(actionId)
@@ -57,19 +62,19 @@ abstract class JokenpoBaseGameFragment : Fragment() {
         val playerSelectedOption = args.playerSelectedOption
         return when (combination) {
             Combination.DRAW_COMBINATION ->
-                appSelectedOption == 0 && playerSelectedOption == "Rock"
-                        || appSelectedOption == 1 && playerSelectedOption == "Paper"
-                        || appSelectedOption == 2 && playerSelectedOption == "Scissor"
+                appSelectedOption == JokenpoOption.ROCK_OPTION && playerSelectedOption == JokenpoOption.ROCK_OPTION
+                        || appSelectedOption == JokenpoOption.PAPER_OPTION && playerSelectedOption == JokenpoOption.PAPER_OPTION
+                        || appSelectedOption == JokenpoOption.SCISSOR_OPTION && playerSelectedOption == JokenpoOption.SCISSOR_OPTION
 
             Combination.LOSE_COMBINATION ->
-                appSelectedOption == 0 && playerSelectedOption == "Scissor"
-                        || appSelectedOption == 1 && playerSelectedOption == "Rock"
-                        || appSelectedOption == 2 && playerSelectedOption == "Paper"
+                appSelectedOption == JokenpoOption.ROCK_OPTION && playerSelectedOption == JokenpoOption.SCISSOR_OPTION
+                        || appSelectedOption == JokenpoOption.PAPER_OPTION && playerSelectedOption == JokenpoOption.ROCK_OPTION
+                        || appSelectedOption == JokenpoOption.SCISSOR_OPTION && playerSelectedOption == JokenpoOption.PAPER_OPTION
 
             Combination.WIN_COMBINATION ->
-                appSelectedOption == 0 && playerSelectedOption == "Paper"
-                        || appSelectedOption == 1 && playerSelectedOption == "Scissor"
-                        || appSelectedOption == 2 && playerSelectedOption == "Rock"
+                appSelectedOption == JokenpoOption.ROCK_OPTION && playerSelectedOption == JokenpoOption.PAPER_OPTION
+                        || appSelectedOption == JokenpoOption.PAPER_OPTION && playerSelectedOption == JokenpoOption.SCISSOR_OPTION
+                        || appSelectedOption == JokenpoOption.SCISSOR_OPTION && playerSelectedOption == JokenpoOption.ROCK_OPTION
         }
     }
 
@@ -84,28 +89,28 @@ abstract class JokenpoBaseGameFragment : Fragment() {
     protected fun showPlayerSelectedOption(resultPlayerImageView: ImageView) {
         val playerSelectedOption = args.playerSelectedOption
         when (playerSelectedOption) {
-            "Rock" -> {
+            JokenpoOption.ROCK_OPTION -> {
                 changeTheImage(resultPlayerImageView, R.drawable.rock_hand_up)
             }
-            "Paper" -> {
+            JokenpoOption.PAPER_OPTION -> {
                 changeTheImage(resultPlayerImageView, R.drawable.paper_hand_up)
             }
-            "Scissor" -> {
+            JokenpoOption.SCISSOR_OPTION -> {
                 changeTheImage(resultPlayerImageView, R.drawable.scissor_hand_up)
             }
         }
     }
 
-    protected fun showAppSelectedOption(anyImage: ImageView) {
-        when (options[appSelectedOption]) {
-            "Rock" -> {
-                changeTheImage(anyImage, R.drawable.rock_hand_down)
+    protected fun showAppSelectedOption(resultAppImageView: ImageView) {
+        when (options[appSelectedOption.ordinal]) {
+            JokenpoOption.ROCK_OPTION -> {
+                changeTheImage(resultAppImageView, R.drawable.rock_hand_down)
             }
-            "Paper" -> {
-                changeTheImage(anyImage, R.drawable.paper_hand_down)
+            JokenpoOption.PAPER_OPTION -> {
+                changeTheImage(resultAppImageView, R.drawable.paper_hand_down)
             }
-            "Scissor" -> {
-                changeTheImage(anyImage, R.drawable.scissor_hand_down)
+            JokenpoOption.SCISSOR_OPTION -> {
+                changeTheImage(resultAppImageView, R.drawable.scissor_hand_down)
             }
         }
     }
@@ -130,4 +135,10 @@ enum class Combination {
     DRAW_COMBINATION,
     WIN_COMBINATION,
     LOSE_COMBINATION
+}
+
+enum class JokenpoOption {
+    ROCK_OPTION,
+    PAPER_OPTION,
+    SCISSOR_OPTION
 }

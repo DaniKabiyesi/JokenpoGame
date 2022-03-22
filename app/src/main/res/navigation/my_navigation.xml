@@ -27,6 +27,6 @@ app:startDestination="@id/nicknameJokenpoGameFragment">
         tools:layout="@layout/fragment_jokenpo_result_game" >
         <argument
             android:name="playerSelectedOption"
-            app:argType="string" />
+            app:argType="com.studying.jokenpo.fragments.JokenpoOption" />
     </fragment>
 </navigation>
